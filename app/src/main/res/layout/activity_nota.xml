@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotaActivity">
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".NotaActivity">
+
+        <TextView
+            android:id="@+id/idText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Id:"
+            android:textColor="@color/colorPrimaryDark" />
+        <EditText
+            android:id="@+id/idInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_1" />
+        <TextView
+            android:id="@+id/tituloText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Titulo"
+            android:textColor="@color/colorPrimaryDark" />
+        <EditText
+            android:id="@+id/tituloInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lembrar de comprar café" />
+        <!-- Resumo -->
+        <TextView
+            android:id="@+id/resumoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resumo"
+            android:textColor="@color/colorPrimaryDark" />
+        <EditText
+            android:id="@+id/resumoInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="Meu café acabou, devo ir comprar na mercearia X porque ...." />
+<!--        Descricao -->
+        <TextView
+            android:id="@+id/descricaoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrição"
+            android:textColor="@color/colorPrimaryDark" />
+        <EditText
+            android:id="@+id/descricaoInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="Meu café acabou, devo ir comprar na mercearia X porque lá o café é moido na hora e melhor" />
+        <TextView
+            android:id="@+id/alertarEmText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alertar Em"
+            android:textColor="@color/colorPrimaryDark" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="dd/MM/YYYY hh:mm"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecionar data e Hora" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/prioridadeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Periodicidade"
+            android:textColor="@color/colorPrimaryDark" />
+        <Spinner
+            android:id="@+id/periodicidadeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown">
+        </Spinner>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
