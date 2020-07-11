@@ -1,99 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NotaActivity">
+    tools:context=".NotaActivity"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_margin="20dp"
+    <ScrollView
+        android:layout_margin="15dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".NotaActivity">
-
-        <TextView
-            android:id="@+id/idText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Id:"
-            android:textColor="@color/colorPrimaryDark" />
-        <EditText
-            android:id="@+id/idInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/_1" />
-        <TextView
-            android:id="@+id/tituloText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Titulo"
-            android:textColor="@color/colorPrimaryDark" />
-        <EditText
-            android:id="@+id/tituloInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Lembrar de comprar café" />
-        <!-- Resumo -->
-        <TextView
-            android:id="@+id/resumoText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Resumo"
-            android:textColor="@color/colorPrimaryDark" />
-        <EditText
-            android:id="@+id/resumoInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:hint="Meu café acabou, devo ir comprar na mercearia X porque ...." />
-<!--        Descricao -->
-        <TextView
-            android:id="@+id/descricaoText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Descrição"
-            android:textColor="@color/colorPrimaryDark" />
-        <EditText
-            android:id="@+id/descricaoInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:hint="Meu café acabou, devo ir comprar na mercearia X porque lá o café é moido na hora e melhor" />
-        <TextView
-            android:id="@+id/alertarEmText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Alertar Em"
-            android:textColor="@color/colorPrimaryDark" />
+        android:layout_weight="1">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".NotaActivity">
+
             <TextView
+                android:visibility="gone"
+                android:id="@+id/idText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="dd/MM/YYYY hh:mm"/>
-            <Button
+                android:text="Id:"
+                android:textColor="@color/colorPrimaryDark" />
+            <EditText
+                android:id="@+id/idInput"
+                android:enabled="false"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/_1" />
+            <TextView
+                android:id="@+id/tituloText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Selecionar data e Hora" />
+                android:text="Titulo"
+                android:textColor="@color/colorPrimaryDark" />
+            <EditText
+                android:id="@+id/tituloInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lembrar de comprar café" />
+            <!-- Resumo -->
+            <TextView
+                android:id="@+id/resumoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resumo"
+                android:textColor="@color/colorPrimaryDark" />
+            <EditText
+                android:id="@+id/resumoInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:hint="Meu café acabou, devo ir comprar na mercearia X porque ...." />
+            <!--        Descricao -->
+            <TextView
+                android:id="@+id/descricaoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descrição"
+                android:textColor="@color/colorPrimaryDark" />
+            <EditText
+                android:id="@+id/descricaoInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:hint="Meu café acabou, devo ir comprar na mercearia X porque lá o café é moido na hora e melhor" />
+            <TextView
+                android:id="@+id/alertarEmText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alertar Em"
+                android:textColor="@color/colorPrimaryDark" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/textDateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="dd/MM/YYYY hh:mm"/>
+                <Button
+                    android:id="@+id/btnDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data"
+                    android:onClick="onDateSelect"
+                    />
+                <Button
+                    android:id="@+id/btnTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hora"
+                    android:onClick="onDateSelect"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/prioridadeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Periodicidade"
+                android:textColor="@color/colorPrimaryDark" />
+            <Spinner
+                android:id="@+id/periodicidadeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown">
+            </Spinner>
         </LinearLayout>
-        <TextView
-            android:id="@+id/prioridadeText"
+    </ScrollView>
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="bottom"
+        android:layout_weight="1">
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Periodicidade"
-            android:textColor="@color/colorPrimaryDark" />
-        <Spinner
-            android:id="@+id/periodicidadeSpinner"
-            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:onClick="onCancelarClick"
+            android:text="CANCELAR"/>
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:spinnerMode="dropdown">
-        </Spinner>
-
+            android:layout_weight="1"
+            android:onClick="onSalvarClick"
+            android:text="CONFIRMAR"/>
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

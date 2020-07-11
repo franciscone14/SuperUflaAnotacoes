@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="?attr/actionBarTheme"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/add_annotation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_add_circle_24"
+            android:clickable="true"
+            android:layout_weight="1"
+            android:onClick="inserirClick"
+            />
+        <ImageView
+            android:id="@+id/add_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_delete_24"
+            android:clickable="true"
+            android:onClick="onDeleteClick"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/sort_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_sort_24"
+            android:clickable="true"
+            android:layout_weight="1"
+            android:onClick="onSortClick"
+            />
+        <ImageView
+            android:id="@+id/add_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_exit_to_app_24"
+            android:clickable="true"
+            android:layout_weight="1"
+            android:onClick="onExitClick"
+            />
+    </LinearLayout>
+</androidx.appcompat.widget.Toolbar>
